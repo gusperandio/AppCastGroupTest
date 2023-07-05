@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:animations="clr-namespace:Xamarin.CommunityToolkit.UI.Views.Animations;assembly=Xamarin.CommunityToolkit"
+             x:Class="AppCastGroupTest.MainPage"
+             BackgroundImageSource="https://img.elo7.com.br/product/original/3559817/papel-de-parede-pet-patinhas-e-animais-faixa-papel-de-parede-lavabo.jpg">
+
+    <ContentPage.Resources>
+        <Style x:Key="ToastStyle" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BackgroundColor" Value="#eb445a" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="OrangeRed" Padding="24" CornerRadius="0">
+                <Label Text="Woof" HorizontalTextAlignment="Center" TextColor="White" FontSize="48" FontAttributes="Bold"/>
+            </Frame>
+
+
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10" Margin="32, 200, 32, 32"
+               AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.7, 0.2"
+               AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+
+                <!-- StackLayout contendo os elementos -->
+                <StackLayout Margin="20,0,20,0">
+                    <!-- Input de login -->
+                    <Entry Placeholder="Usuário" x:Name="User" PlaceholderColor="#C8C8C8"/>
+
+                    <!-- Input de senha -->
+                    <Entry Placeholder="Senha" IsPassword="True" x:Name="Senha" PlaceholderColor="#C8C8C8"/>
+
+                    <!-- Botão de login -->
+                    <Button Text="ACESSAR" TextColor="White" BackgroundColor="OrangeRed" FontSize="Large" FontAttributes="Bold"  Clicked="Logar"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

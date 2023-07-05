@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCastGroupTest.HomePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Spacing="10" Padding="10" BackgroundColor="#FF9952">
+                <Button Text="Recarregar lista" BackgroundColor="DodgerBlue" Padding="20" Margin="40, 20, 40, 20" TextColor="White" FontSize="20" FontAttributes="Bold" CornerRadius="16" Clicked="Reload"></Button>
+
+                <ProgressBar x:Name="progressBar" IsVisible="True" ProgressColor="DodgerBlue"/>
+                <ListView x:Name="dogListView" RowHeight="150" IsVisible="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="200">
+                                <Frame BackgroundColor="White" CornerRadius="5" Padding="10" Margin="5">
+                                    <StackLayout Orientation="Horizontal" Spacing="20">
+                                        <Image Source="{Binding message}" WidthRequest="100" HeightRequest="100"/>
+
+                                        <StackLayout VerticalOptions="Center">
+                                            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Age}" FontSize="16"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
